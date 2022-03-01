@@ -1,0 +1,18 @@
+a {
+  color: #5045ee;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:active,
+  &:visited {
+    color: #0096ad;
+  }
+}
+
+.survey {
+  height: 250px;
+  overflow: scroll;
+  margin: 0 40px;
+  border: 1px solid gray;
+  overflow-x: hidden;
+}

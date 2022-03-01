@@ -1,0 +1,78 @@
+.check-container {
+  display: flex;
+  column-gap: 32px;
+  position: relative;
+
+  p {
+    margin-top: 5px;
+  }
+}
+
+.check-container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: white;
+  border: 1px solid lightgray;
+}
+
+.check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkboxmark {
+  border-radius: 1px; // 2px si es checkbox 50% si es radio
+}
+
+.radiomark {
+  border-radius: 50%; // 2px si es checkbox 50% si es radio
+}
+
+.check-container input:checked ~ .checkboxmark {
+  background-color: #5045ee;
+  border: 1px solid #5045ee;
+}
+.check-container input:checked ~ .radiomark {
+  background-color: white;
+  border: 1px solid #5045ee;
+}
+
+.checkboxmark:after,
+.radiomark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.check-container input:checked ~ .checkboxmark:after,
+.check-container input:checked ~ .radiomark:after {
+  display: block;
+}
+
+.checkboxmark:after {
+  left: 9px;
+  top: 3px;
+  width: 5px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Style the indicator (dot/circle) */
+.radiomark:after {
+  top: 6px;
+  left: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #5045ee;
+}

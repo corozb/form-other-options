@@ -1,0 +1,24 @@
+.button__primary {
+  background-color: #fff;
+  max-height: 65px;
+
+  .btn-primary {
+    background: #5045ee;
+    border-radius: 40px;
+    width: 100%;
+    font-weight: 600;
+    border: none;
+    padding: 11px 15px;
+    color: #fff !important;
+    font-size: 16px;
+    outline: none !important;
+
+    &:disabled {
+      color: #d3d7e5 !important;
+      background-color: #f5f7fa;
+      border: 1px solid #f5f7fa;
+      pointer-events: none;
+      font-weight: 600;
+    }
+  }
+}
